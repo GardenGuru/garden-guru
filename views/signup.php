@@ -67,7 +67,6 @@
           <div class="row">
             <div class="form-group col-12">
               <button type="submit" class="btn btn-success float-right">Sign Up</button>
-              <!-- <a class="btn btn-success float-right" href="/onboard.php">Sign Up</a> -->
             </div>
           </div>
         </form>

@@ -5,12 +5,13 @@
     }
 
     public function signup() {
-      $first_name = 'Travis';
       require_once('views/signup.php');
     }
 
     public function doSignup() {
       User::store($_POST);
+      $successOrFail = User::logIn($_POST['email'], $_POST['password']);
+      $user = User::find($_SESSION['user']);
       require_once('views/onboard.php');
     }
 
@@ -32,6 +33,16 @@
 
     public function login() {
       require_once('views/login.php');
+    }
+
+    public function doLogin() {
+      $successOrFail = User::logIn($_POST['email'], $_POST['password']);
+      if ($successOrFail == "failure") {
+        require_once('views/login.php');
+      } else {
+        $user = User::find($_SESSION['user']);
+        require_once('views/manage.php');
+      }
     }
   }
 ?>

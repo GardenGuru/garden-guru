@@ -39,7 +39,7 @@
 
       // we create a list of Post objects from the database results
       foreach($req->fetchAll() as $user) {
-        $list[] = new Post($user['id'], $user['first_name'], $user['last_name'], $user['email']);
+        $list[] = new User($user['id'], $user['first_name'], $user['last_name'], $user['email']);
       }
 
       return $list;
@@ -52,9 +52,26 @@
       $req = $db->prepare('SELECT * FROM users WHERE id = :id');
       // the query was prepared, now we replace :id with our actual $id value
       $req->execute(array('id' => $id));
-      $post = $req->fetch();
+      $user = $req->fetch();
 
-      return new Post($post['id'], $post['first_name'], $post['last_name'], $user['email']);
+      return new User($user['id'], $user['first_name'], $user['last_name'], $user['email']);
+    }
+
+    public static function logIn($email, $password) {
+      $db = Db::getInstance();
+      $req = $db->prepare('SELECT * FROM users WHERE email = :email');
+      $req->execute(array(
+        ':email' => $email
+      ));
+      $user = $req->fetch();
+
+      if ($password === $user['password']) {
+        // Logged In (it sucks, temp solution)
+        $_SESSION['user'] = $user['id'];
+        return "success";
+      }
+
+      return "failure";
     }
   }
 ?>

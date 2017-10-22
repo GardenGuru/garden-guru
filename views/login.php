@@ -40,22 +40,22 @@
             <img id="signupImage" src="/img/gardenGuruLogo.png">
           </div>
         </div>
-        <form>
+        <form method="POST" action="?controller=home&action=doLogin">
           <div class="row">
             <div class="form-group col-12">
               <label for="email">Email Address</label>
-              <input type="email" class="form-control" id="email" placeholder="Email">
+              <input type="email" class="form-control" id="email" placeholder="Email" required>
             </div>
           </div>
           <div class="row">
             <div class="form-group col-12">
               <label for="password">Password</label>
-              <input type="password" class="form-control" id="password" placeholder="Password">
+              <input type="password" class="form-control" id="password" placeholder="Password" required>
             </div>
           </div>
           <div class="row">
             <div class="form-group col-12">
-              <a class="btn btn-success float-right" href="?controller=home&action=manage">Login</a>
+              <button type="submit" class="btn btn-success float-right">Login</button>
             </div>
           </div>
         </form>
