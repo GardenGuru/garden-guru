@@ -101,12 +101,29 @@
       background-color: white;
     }
 
+    .vertical-line {
+      border-right: 1px solid black; 
+    }
+
+    .card-body > .row.h-100 > .my-auto {
+      padding-left: 5px;
+    }
+
+    .card-img-div {
+      padding-right: 5px;
+    }
+
+    .card-text-div {
+      padding-right: 0px;
+      line-height: 1.4em;
+    }
+
   </style>
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
-  <nav class="navbar navbar-dark bg-dark fixed-top" id="mainNav">
+  <nav class="navbar navbar-dark bg-dark fixed-top mb-4" id="mainNav">
     <ul class="navbar-nav" id="exampleAccordion">
       <li class="col-2 col-sm-2 col-md-2 nav-item">
         <a class="navbar-btn btn btn-default" href="#">
@@ -142,22 +159,30 @@
   </nav>
   <div class="content-wrapper">
     <div id="infoCardContainer" class="container-fluid">
+      <div class="jumbotron jumbtron-fluid">
+        <div class="container">
+          <h1 class="display-3">Great Guru Travis' Gorgeous Garden of the Gods</h1>
+          <p class="lead">We dem garden boyzzzz</p>
+        </div>
+      </div>
       <!-- Icon Cards-->
       <div class="top-row row">
         <div class="col-md-12">
           <div class="card text-black secondary-color o-hidden h-100">
             <div class="card-body">
               <div class="row h-100">
-                <div class="col-4 col-sm-4 col-md-3 my-auto">
+                <div class="card-img-div col-3 col-sm-3 col-md-2 my-auto">
                   <img class="plant-img img-fluid" src="/img/tomato.jpg">
                 </div>
-                <div class="col-8 col-sm-8 col-md-9 my-auto">
+                <div class="vertical-line"></div>
+                <div class="card-text-div col-8 col-sm-8 col-md-9 my-auto">
                   <p>Tomatoes run on warmth; plant them in late spring and early summer except in zone 10, where they are a fall and winter crop.</p>
                 </div>
               </div>
             </div>
             <span class="card-footer">
-              <a class="btn btn-success float-right" href="#">Learn More:</a>
+              <a class="btn btn-success float-left" href="#">Buy Seeds</a>
+              <a class="btn btn-success float-right" href="#">Learn More</a>
             </span>
           </div>
         </div>
@@ -168,16 +193,18 @@
           <div class="card text-black secondary-color o-hidden h-100">
             <div class="card-body">
               <div class="row h-100">
-                <div class="col-4 col-sm-4 col-md-3 my-auto">
+                <div class="card-img-div col-3 col-sm-3 col-md-2 my-auto">
                   <img class="plant-img img-fluid" src="/img/tomato.jpg">
                 </div>
-                <div class="col-8 col-sm-8 col-md-9 my-auto">
+                <div class="vertical-line"></div>
+                <div class="card-text-div col-8 col-sm-8 col-md-9 my-auto">
                   <p>Tomatoes run on warmth; plant them in late spring and early summer except in zone 10, where they are a fall and winter crop.</p>
                 </div>
               </div>
             </div>
             <span class="card-footer">
-              <a class="btn btn-success float-right" href="#">Learn More:</a>
+              <a class="btn btn-success float-left" href="#">Buy Seeds</a>
+              <a class="btn btn-success float-right" href="#">Learn More</a>
             </span>
           </div>
         </div>
@@ -188,16 +215,18 @@
           <div class="card text-black secondary-color o-hidden h-100">
             <div class="card-body">
               <div class="row h-100">
-                <div class="col-4 col-sm-4 col-md-3 my-auto">
+                <div class="card-img-div col-3 col-sm-3 col-md-2 my-auto">
                   <img class="plant-img img-fluid" src="/img/tomato.jpg">
                 </div>
-                <div class="col-8 col-sm-8 col-md-9 my-auto">
+                <div class="vertical-line"></div>
+                <div class="card-text-div col-8 col-sm-8 col-md-9 my-auto">
                   <p>Tomatoes run on warmth; plant them in late spring and early summer except in zone 10, where they are a fall and winter crop.</p>
                 </div>
               </div>
             </div>
             <span class="card-footer">
-              <a class="btn btn-success float-right" href="#">Learn More:</a>
+              <a class="btn btn-success float-left" href="#">Buy Seeds</a>
+              <a class="btn btn-success float-right" href="#">Learn More</a>
             </span>
           </div>
         </div>
@@ -208,16 +237,18 @@
           <div class="card text-black secondary-color o-hidden h-100">
             <div class="card-body">
               <div class="row h-100">
-                <div class="col-4 col-sm-4 col-md-3 my-auto">
+                <div class="card-img-div col-3 col-sm-3 col-md-2 my-auto">
                   <img class="plant-img img-fluid" src="/img/tomato.jpg">
                 </div>
-                <div class="col-8 col-sm-8 col-md-9 my-auto">
+                <div class="vertical-line"></div>
+                <div class="card-text-div col-8 col-sm-8 col-md-9 my-auto">
                   <p>Tomatoes run on warmth; plant them in late spring and early summer except in zone 10, where they are a fall and winter crop.</p>
                 </div>
               </div>
             </div>
             <span class="card-footer">
-              <a class="btn btn-success float-right" href="#">Learn More:</a>
+              <a class="btn btn-success float-left" href="#">Buy Seeds</a>
+              <a class="btn btn-success float-right" href="#">Learn More</a>
             </span>
           </div>
         </div>
@@ -228,16 +259,18 @@
           <div class="card text-black secondary-color o-hidden h-100">
             <div class="card-body">
               <div class="row h-100">
-                <div class="col-4 col-sm-4 col-md-3 my-auto">
+                <div class="card-img-div col-3 col-sm-3 col-md-2 my-auto">
                   <img class="plant-img img-fluid" src="/img/tomato.jpg">
                 </div>
-                <div class="col-8 col-sm-8 col-md-9 my-auto">
+                <div class="vertical-line"></div>
+                <div class="card-text-div col-8 col-sm-8 col-md-9 my-auto">
                   <p>Tomatoes run on warmth; plant them in late spring and early summer except in zone 10, where they are a fall and winter crop.</p>
                 </div>
               </div>
             </div>
             <span class="card-footer">
-              <a class="btn btn-success float-right" href="#">Learn More:</a>
+              <a class="btn btn-success float-left" href="#">Buy Seeds</a>
+              <a class="btn btn-success float-right" href="#">Learn More</a>
             </span>
           </div>
         </div>
