@@ -17,7 +17,7 @@
 
   // just a list of the controllers we have and their actions
   // we consider those "allowed" values
-  $controllers = array('home' => ['home', 'signup', 'doSignup', 'calendar', 'manage', 'plantIndex', 'login', 'error']);
+  $controllers = array('home' => ['home', 'signup', 'doSignup', 'calendar', 'manage', 'plantIndex', 'login', 'doLogin', 'error']);
 
   // check that the requested controller and action are both allowed
   // if someone tries to access something else he will be redirected to the error action of the home controller
