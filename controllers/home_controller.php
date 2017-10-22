@@ -28,6 +28,7 @@
     }
 
     public function manage() {
+      $user = User::find($_SESSION['user']);
       require_once('views/manage.php');
     }
 
