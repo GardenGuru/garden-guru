@@ -68,7 +68,7 @@
     <div id="infoCardContainer" class="container-fluid">
       <div class="top-jumbo jumbotron jumbtron-fluid">
         <div class="container">
-          <h4>Guru Travis' Garden</h4>
+          <h4>Guru <?php echo $user->first_name ?>'s Garden</h4>
           <div class="row">
             <div class="col-6">
               <p><span id="place"></span></p>
