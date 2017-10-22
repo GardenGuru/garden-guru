@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/custom-style.css">
     <link rel="stylesheet" href="/css/onboarding-style.css">
+    <style>
+      .sticky-footer {
+        position: fixed;
+        bottom: 0;
+      }
+    </style>
   </head>
   <body class="bg-dark">
     <nav class="navbar navbar-dark bg-dark mb-4">

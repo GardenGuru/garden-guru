@@ -37,12 +37,12 @@
         </a>
       </li>
       <li class="col-2 col-sm-2 col-md-2 nav-item">
-        <a class="navbar-btn btn btn-default" href="#">
+        <a class="navbar-btn btn btn-default" href="/calendar.php">
           <span class="nav-link-text"><i class="fa fa-calendar fa-lg" aria-hidden="true"></i></span>
         </a>
       </li>
       <li class="col-2 col-sm-2 col-md-2 nav-item">
-        <a class="navbar-btn btn btn-default" href="#">
+        <a class="navbar-btn btn btn-default" href="/plantIndex.php">
           <span class="nav-link-text"><i class="fa fa-leaf fa-lg" aria-hidden="true"></i></span>
         </a>
       </li>

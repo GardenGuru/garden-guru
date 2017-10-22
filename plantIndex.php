@@ -17,6 +17,11 @@
   <!-- Custom styles for this template-->
   <link href="css/sb-admin.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/custom-style.css">
+  <style>
+    #searchBar {
+      margin-top: 1em;
+    }
+  </style>
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -57,17 +62,16 @@
   </nav>
   <div class="content-wrapper">
     <div id="infoCardContainer" class="container-fluid">
-      <div class="top-jumbo jumbotron jumbtron-fluid">
+      <div class="top-jumbo jumbotron jumbotron-fluid">
         <div class="container">
-          <h4>Guru Travis' Garden</h4>
-          <div class="row">
-            <div class="col-6">
-              <p><span id="place"></span></p>
-              <p><span id="weatherIcon"></span>: <span id="weatherDescription"></span></p>
+          <h4>The Index</h4>
+          <p>Search for new additions to your garden here, we've already suggested a few for you based on current location and climate!</p>
+          <div id="searchBar" class="form-row align-items-center">
+            <div class="col-8">
+              <input type="text" class="form-control" placeholder="Search">
             </div>
-            <div class="col-6">
-              <p id="time"></p>
-              <p><span id="temperature"></span>F</p>
+            <div class="col-4">
+              <button type="button" class="btn secondary-color">Search</button>
             </div>
           </div>
         </div>
@@ -88,7 +92,9 @@
               </div>
             </div>
             <span class="card-footer">
-              <a class="btn btn-success float-left" href="#">Buy Seeds</a>
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" id="tomato1" value="tomato1"> Add to List
+              </label>
               <a class="btn btn-success float-right" href="#">Learn More</a>
             </span>
           </div>
@@ -110,7 +116,9 @@
               </div>
             </div>
             <span class="card-footer">
-              <a class="btn btn-success float-left" href="#">Buy Seeds</a>
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" id="tomato1" value="tomato1"> Add to List
+              </label>
               <a class="btn btn-success float-right" href="#">Learn More</a>
             </span>
           </div>
@@ -132,7 +140,9 @@
               </div>
             </div>
             <span class="card-footer">
-              <a class="btn btn-success float-left" href="#">Buy Seeds</a>
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" id="tomato1" value="tomato1"> Add to List
+              </label>
               <a class="btn btn-success float-right" href="#">Learn More</a>
             </span>
           </div>
@@ -154,7 +164,9 @@
               </div>
             </div>
             <span class="card-footer">
-              <a class="btn btn-success float-left" href="#">Buy Seeds</a>
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" id="tomato1" value="tomato1"> Add to List
+              </label>
               <a class="btn btn-success float-right" href="#">Learn More</a>
             </span>
           </div>
@@ -176,7 +188,9 @@
               </div>
             </div>
             <span class="card-footer">
-              <a class="btn btn-success float-left" href="#">Buy Seeds</a>
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" id="tomato1" value="tomato1"> Add to List
+              </label>
               <a class="btn btn-success float-right" href="#">Learn More</a>
             </span>
           </div>
@@ -206,64 +220,5 @@
     <script src="/js/sb-admin-charts.min.js"></script>
   </div>
 </body>
-
-<script type="text/javascript">
-  
-  $(document).ready(function() {
-
-    function updateTime() {
-      var currentTime = new Date();
-      var hours = currentTime.getHours();
-      var minutes = currentTime.getMinutes();
-      var seconds = currentTime.getSeconds();
-
-      if (minutes < 10) {
-        minutes = "0" + minutes;
-      }
-
-      if (seconds < 10) {
-        seconds = "0" + seconds;
-      }
-
-      var time_str = hours + ":" + minutes + ":" + seconds + " ";
-
-      if (hours > 11) {
-        time_str += "PM";
-      } else {
-        time_str += "AM";
-      }
-
-      $("#time").html(time_str);
-    }
-
-    updateTime();
-
-    setInterval(updateTime, 1000);
-
-    var getWeatherForCoords = function(lat, lng) {
-      $.get("http://api.openweathermap.org/data/2.5/weather", {lat: lat, lon: lng, units: "imperial", APPID: "8f4347b58a17858ab0eded6c34ac6fe2"}, function(data) {
-        $("#place").html(data.name);
-        $("#weatherIcon").html("<img src='http://openweathermap.org/img/w/" + data.weather[0].icon + ".png'></img>");
-        $("#weatherDescription").html(data.weather[0].main);
-        $("#temperature").html(parseInt(data.main.temp));
-      });
-    }
-
-    var getAPIGeolocation = function() {
-      $.post("https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyBe2RDvKFDOZXO1_U9QU3dVQoao0T_aWn4", function(success) {
-        var coords = {
-          latitude: success.location.lat,
-          longitude: success.location.lng
-        }
-
-        getWeatherForCoords(coords.latitude, coords.longitude);
-      }).fail(function(err) {
-        console.log(err);
-      });
-    };
-
-    getAPIGeolocation();
-  });
-</script>
 
 </html>
