@@ -40,7 +40,7 @@
             <img id="signupImage" src="/img/gardenGuruLogo.png">
           </div>
         </div>
-        <form method="POST" action="/signup?controller=home&action=doSignup">
+        <form method="POST" action="?controller=home&action=doSignup">
           <div class="row">
             <div class="form-group col-6">
               <label for="firstName">First Name</label>
