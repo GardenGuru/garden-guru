@@ -44,13 +44,13 @@
           <div class="row">
             <div class="form-group col-12">
               <label for="email">Email Address</label>
-              <input type="email" class="form-control" id="email" placeholder="Email" required>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
             </div>
           </div>
           <div class="row">
             <div class="form-group col-12">
               <label for="password">Password</label>
-              <input type="password" class="form-control" id="password" placeholder="Password" required>
+              <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
             </div>
           </div>
           <div class="row">
