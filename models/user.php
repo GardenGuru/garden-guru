@@ -29,6 +29,7 @@
       } catch(PDOException $e) {
         return var_dump($e);
       }
+      return "success";
     }
 
     public static function all() {
