@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^controller=([a-z]+)&action=([a-z]+)$ $1/$2 [NC,L]

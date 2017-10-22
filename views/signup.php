@@ -40,33 +40,34 @@
             <img id="signupImage" src="/img/gardenGuruLogo.png">
           </div>
         </div>
-        <form>
+        <form method="POST" action="?controller=home&action=doSignup">
           <div class="row">
             <div class="form-group col-6">
               <label for="firstName">First Name</label>
-              <input type="text" class="form-control" id="firstName" placeholder="First">
+              <input type="text" class="form-control" id="firstName" name="first_name" placeholder="First">
             </div>
             <div class="form-group col-6">
               <label for="lastName">Last Name</label>
-              <input type="text" class="form-control" id="lastName" placeholder="Last">
+              <input type="text" class="form-control" id="lastName" name="last_name" placeholder="Last">
             </div>
           </div>
           <div class="row">
             <div class="form-group col-12">
               <label for="email">Email Address</label>
-              <input type="email" class="form-control" id="email" placeholder="Email">
+              <input type="email" class="form-control" id="email" name="email" placeholder="Email">
             </div>
           </div>
           <div class="row">
             <div class="form-group col-12">
               <label for="password">Password</label>
-              <input type="password" class="form-control" id="password" placeholder="Password">
-              <input type="password" class="form-control" id="confirmPass" placeholder="Confirm Password">
+              <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+              <input type="password" class="form-control" id="confirmPass" name="confirm_pass" placeholder="Confirm Password">
             </div>
           </div>
           <div class="row">
             <div class="form-group col-12">
-              <a class="btn btn-success float-right" href="/onboard.php">Sign Up</a>
+              <button type="submit" class="btn btn-success float-right">Sign Up</button>
+              <!-- <a class="btn btn-success float-right" href="/onboard.php">Sign Up</a> -->
             </div>
           </div>
         </form>
