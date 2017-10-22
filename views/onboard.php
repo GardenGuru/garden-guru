@@ -19,6 +19,10 @@
       margin-top: 1em;
       margin-bottom: 1em;
     }
+
+    .top-jumbo {
+      margin-top: 0em;
+    }
   </style>
 </head>
 
@@ -68,7 +72,7 @@
       <div class="col-md-12">
         <div class="card text-black secondary-color o-hidden h-100">
           <div class="card-body">
-            <div class="row h-100">
+            <div class="row">
               <div class="card-img-div col-3 col-sm-3 col-md-2 my-auto">
                 <img class="plant-img img-fluid" src="/img/tomato.jpg">
               </div>
@@ -91,7 +95,7 @@
       <div class="col-md-12">
         <div class="card text-black secondary-color o-hidden h-100">
           <div class="card-body">
-            <div class="row h-100">
+            <div class="row">
               <div class="card-img-div col-3 col-sm-3 col-md-2 my-auto">
                 <img class="plant-img img-fluid" src="/img/tomato.jpg">
               </div>
@@ -114,7 +118,7 @@
       <div class="col-md-12">
         <div class="card text-black secondary-color o-hidden h-100">
           <div class="card-body">
-            <div class="row h-100">
+            <div class="row">
               <div class="card-img-div col-3 col-sm-3 col-md-2 my-auto">
                 <img class="plant-img img-fluid" src="/img/tomato.jpg">
               </div>
@@ -137,7 +141,7 @@
       <div class="col-md-12">
         <div class="card text-black secondary-color o-hidden h-100">
           <div class="card-body">
-            <div class="row h-100">
+            <div class="row">
               <div class="card-img-div col-3 col-sm-3 col-md-2 my-auto">
                 <img class="plant-img img-fluid" src="/img/tomato.jpg">
               </div>
