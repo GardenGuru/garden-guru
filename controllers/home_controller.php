@@ -17,5 +17,21 @@
     public function error() {
       require_once('views/error.php');
     }
+
+    public function calendar() {
+      require_once('views/calendar.php');
+    }
+
+    public function plantIndex() {
+      require_once('views/plantIndex.php');
+    }
+
+    public function manage() {
+      require_once('views/manage.php');
+    }
+
+    public function login() {
+      require_once('views/login.php');
+    }
   }
 ?>

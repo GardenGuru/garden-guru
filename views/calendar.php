@@ -31,7 +31,7 @@
     <nav class="navbar navbar-dark bg-dark fixed-top mb-4" id="mainNav">
       <ul class="navbar-nav" id="exampleAccordion">
         <li class="col-2 col-sm-2 col-md-2 nav-item">
-          <a id="homeButton" class="navbar-btn btn btn-default" href="/manage.php">
+          <a id="homeButton" class="navbar-btn btn btn-default" href="?controller=home&action=manage">
             <span class="nav-link-text"><img id="homeLogo" src="/img/gardenGuruLogoMini.png"></span>
           </a>
         </li>
@@ -41,12 +41,12 @@
           </a>
         </li>
         <li class="col-2 col-sm-2 col-md-2 nav-item">
-          <a class="navbar-btn btn btn-default" href="/calendar.php">
+          <a class="navbar-btn btn btn-default" href="?controller=home&action=calendar">
             <span class="nav-link-text"><i class="fa fa-calendar fa-lg" aria-hidden="true"></i></span>
           </a>
         </li>
         <li class="col-2 col-sm-2 col-md-2 nav-item">
-          <a class="navbar-btn btn btn-default" href="/plantIndex.php">
+          <a class="navbar-btn btn btn-default" href="?controller=home&action=plantIndex">
             <span class="nav-link-text"><i class="fa fa-leaf fa-lg" aria-hidden="true"></i></span>
           </a>
         </li>

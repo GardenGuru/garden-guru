@@ -23,7 +23,7 @@
           <button class="navbar-btn btn btn-default"><span class="nav-link-text"><img id="homeLogo" src="/img/gardenGuruLogoMini.png"></span></button>
         </li>
         <li class="offset-7 col-3 col-sm-3 col-md-3 nav-item">
-          <a id="loginButton" class="navbar-btn btn btn-default" href="/login.php">Login</a>
+          <a id="loginButton" class="navbar-btn btn btn-default" href="?controller=home&action=login">Login</a>
         </li>
       </ul>
     </nav>

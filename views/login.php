@@ -28,7 +28,7 @@
           <button class="navbar-btn btn btn-default"><span class="nav-link-text"><img id="homeLogo" src="/img/gardenGuruLogoMini.png"></span></button>
         </li>
         <li class="offset-7 col-3 col-sm-3 col-md-3 nav-item">
-          <a id="signupButton" class="navbar-btn btn btn-default" href="/signup.php">Signup</a>
+          <a id="signupButton" class="navbar-btn btn btn-default" href="?controller=home&action=signup">Signup</a>
         </li>
       </ul>
     </nav>
@@ -55,7 +55,7 @@
           </div>
           <div class="row">
             <div class="form-group col-12">
-              <a class="btn btn-success float-right" href="/manage.php">Login</a>
+              <a class="btn btn-success float-right" href="?controller=home&action=manage">Login</a>
             </div>
           </div>
         </form>
