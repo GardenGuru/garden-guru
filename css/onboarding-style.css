@@ -1,0 +1,35 @@
+#navbarList {
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#navbarList a {
+  border-bottom: 0px;
+  border-right: 0px;
+}
+
+#navbarList button {
+  border-bottom: 0px;
+  border-right: 0px;
+}
+
+#navbarList button:active {
+  background-color: #C7E78B;
+}
+
+#navbarList button:focus {
+  background-color: #C7E78B;
+}
+
+#navbarList button:hover {
+  background-color: #C7E78B;
+}
+
+#loginButton {
+  border-left: 1px solid black;
+}
+
+#signupButton {
+  border-left: 1px solid black;
+}

@@ -1,0 +1,135 @@
+.bg-dark {
+  background-color: #81AE64!important;
+}
+
+.bg-light {
+  background-color: #C7E78B!important;
+}
+
+.navbar-toggler {
+  background-color: rgb(52, 58, 64);
+}
+
+.navbar {
+  padding: 0px;
+}
+
+.navbar-nav {
+  flex-direction: row;
+  width: 100%;
+}
+
+.navbar-btn {
+  width: 100%;
+  border-radius: 0em;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  background-color: #C7E78B;
+  color: black;
+}
+
+.navbar-btn:hover {
+  color: black;
+  background-color: #81AE64;
+}
+
+.navbar-nav > li:first-of-type > a {
+  border-left: 1px solid black;
+}
+
+.nav-item {
+  padding: 0px;
+}
+
+.secondary-color {
+  background-color: #FFF4C9;
+}
+
+.top-jumbo {
+  margin-top: 3em;
+  margin-bottom: 0em;
+  background-color: #C7E78B;
+  border: 1px solid black;
+  padding-top: 1.5em;
+}
+
+.top-jumbo p {
+  font-size: .8em;
+  margin-bottom: 0em;
+}
+
+.plant-img {
+  background-color: white;
+  border: 1px solid black;
+}
+
+.btn-success {
+  background-color: #C7E78B;
+  color: black;
+}
+
+.btn-success:hover {
+  background-color: #81AE64;
+  color: black;
+}
+
+.btn-success:active {
+  color: black;
+}
+
+.card-body p {
+  margin: 0em;
+  font-size: .8em;
+}
+
+.card-footer > a {
+  font-size: .8em;
+}
+
+.info-card {
+  margin-top: 1em;
+}
+
+#bottomFixedContainer {
+  height: 6em;
+  width: 100%;
+  position: fixed;
+  z-index: 777;
+  bottom: 0px;
+  background-color: white;
+}
+
+.vertical-line {
+  border-right: 1px solid black; 
+}
+
+.card-body > .row.h-100 > .my-auto {
+  padding-left: 5px;
+}
+
+.card-img-div {
+  padding-right: 5px;
+}
+
+.card-text-div {
+  padding-right: 0px;
+  line-height: 1.4em;
+}
+
+#homeButton {
+  padding-left: .25em;
+  padding-right: .25em;
+}
+
+#homeLogo {
+  width: 24px;
+  height: auto;
+}
+
+#weatherDescription {
+  text-transform: capitalize;
+}
+
+#weatherIcon > img {
+  width: 25px;
+}
