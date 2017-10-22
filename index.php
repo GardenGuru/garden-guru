@@ -137,6 +137,14 @@
       height: auto;
     }
 
+    #weatherDescription {
+      text-transform: capitalize;
+    }
+
+    #weatherIcon > img {
+      width: 25px;
+    }
+
   </style>
 </head>
 
@@ -183,10 +191,13 @@
           <h4>Guru Travis' Garden</h4>
           <div class="row">
             <div class="col-6">
-              <p>San Antonio, TX</p>
-              <p id="time"></p>
+              <p><span id="place"></span></p>
+              <p><span id="weatherIcon"></span>: <span id="weatherDescription"></span></p>
             </div>
-            <div class="col-6"></div>
+            <div class="col-6">
+              <p id="time"></p>
+              <p><span id="temperature"></span>F</p>
+            </div>
           </div>
         </div>
       </div>
@@ -326,35 +337,90 @@
 </body>
 
 <script type="text/javascript">
+  
+  $(document).ready(function() {
 
-  function updateTime() {
-    var currentTime = new Date();
-    var hours = currentTime.getHours();
-    var minutes = currentTime.getMinutes();
-    var seconds = currentTime.getSeconds();
+    function updateTime() {
+      var currentTime = new Date();
+      var hours = currentTime.getHours();
+      var minutes = currentTime.getMinutes();
+      var seconds = currentTime.getSeconds();
 
-    if (minutes < 10) {
-      minutes = "0" + minutes;
+      if (minutes < 10) {
+        minutes = "0" + minutes;
+      }
+
+      if (seconds < 10) {
+        seconds = "0" + seconds;
+      }
+
+      var time_str = hours + ":" + minutes + ":" + seconds + " ";
+
+      if (hours > 11) {
+        time_str += "PM";
+      } else {
+        time_str += "AM";
+      }
+
+      $("#time").html(time_str);
     }
 
-    if (seconds < 10) {
-      seconds = "0" + seconds;
+    updateTime();
+
+    setInterval(updateTime, 1000);
+
+    // function getCurrentLocation() {
+    //   if (navigator.geolocation) {
+    //     navigator.geolocation.getCurrentPosition(function(position) {
+    //       var pos = {
+    //         lat: position.coords.latitude,
+    //         lng: position.coords.longitude
+    //       }
+
+    //       console.log(pos);
+    //     }, function () {
+    //       handleLocationError(true);
+    //     });
+    //   } else {
+    //     handleLocationError(false);
+    //   }
+    // }
+
+    // function handleLocationError(browserHasGeo) {
+    //   alert(browserHasGeo ? "Error: The Geolocation service failed." : "Error: Your browser does not support geolocation.");
+    // }
+
+    // getCurrentLocation();
+
+
+    // var apiGeolocationSuccess = function(position) {
+    //   alert("API geolocation success!\n\nlat = " + position.coords.latitude + "\nlng = " + position.coords.longitude);
+    // };
+
+    var getWeatherForCoords = function(lat, lng) {
+      $.get("http://api.openweathermap.org/data/2.5/weather", {lat: lat, lon: lng, units: "imperial", APPID: "8f4347b58a17858ab0eded6c34ac6fe2"}, function(data) {
+        $("#place").html(data.name);
+        $("#weatherIcon").html("<img src='http://openweathermap.org/img/w/" + data.weather[0].icon + ".png'></img>");
+        $("#weatherDescription").html(data.weather[0].main);
+        $("#temperature").html(parseInt(data.main.temp));
+      });
     }
 
-    var time_str = hours + ":" + minutes + ":" + seconds + " ";
+    var getAPIGeolocation = function() {
+      $.post("https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyBe2RDvKFDOZXO1_U9QU3dVQoao0T_aWn4", function(success) {
+        var coords = {
+          latitude: success.location.lat,
+          longitude: success.location.lng
+        }
 
-    if (hours > 11) {
-      time_str += "PM";
-    } else {
-      time_str += "AM";
-    }
+        getWeatherForCoords(coords.latitude, coords.longitude);
+      }).fail(function(err) {
+        console.log(err);
+      });
+    };
 
-    $("#time").html(time_str);
-  }
-
-  updateTime();
-
-  setInterval(updateTime, 1000);
+    getAPIGeolocation();
+  });
 
 </script>
 
