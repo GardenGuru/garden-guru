@@ -15,14 +15,20 @@
     }
 
     public static function store($userData) {
-      $db = Db::getInstance();
-      $req = $db->query('INSERT INTO users (first_name, last_name, email, password) VALUES (:first_name, :last_name, :email, :password)');
-      $req->execute(array(
-        'first_name' => $userData['first_name'], 
-        'last_name' => $userData['last_name'],
-        'email' => $userData['email'],
-        'password' => $userData['password']
-      ));
+      try {
+        $db = Db::getInstance();
+        $sql = 'INSERT INTO users (first_name, last_name, email, password) 
+              VALUES (:first_name, :last_name, :email, :password)';
+        $req = $db->prepare($sql);
+        $req->execute(array(
+          ':first_name' => $userData['first_name'], 
+          ':last_name' => $userData['last_name'],
+          ':email' => $userData['email'],
+          ':password' => $userData['password']
+        ));
+      } catch(PDOException $e) {
+        return var_dump($e);
+      }
     }
 
     public static function all() {
