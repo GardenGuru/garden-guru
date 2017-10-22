@@ -60,8 +60,17 @@
       background-color: #FFF4C9;
     }
 
-    .top-row {
+    .top-jumbo {
       margin-top: 3em;
+      margin-bottom: 0em;
+      background-color: #C7E78B;
+      border: 1px solid black;
+      padding-top: 1.5em;
+    }
+
+    .top-jumbo p {
+      font-size: .8em;
+      margin-bottom: 0em;
     }
 
     .plant-img {
@@ -118,6 +127,16 @@
       line-height: 1.4em;
     }
 
+    #homeButton {
+      padding-left: .25em;
+      padding-right: .25em;
+    }
+
+    #homeLogo {
+      width: 24px;
+      height: auto;
+    }
+
   </style>
 </head>
 
@@ -126,8 +145,8 @@
   <nav class="navbar navbar-dark bg-dark fixed-top mb-4" id="mainNav">
     <ul class="navbar-nav" id="exampleAccordion">
       <li class="col-2 col-sm-2 col-md-2 nav-item">
-        <a class="navbar-btn btn btn-default" href="#">
-          <span class="nav-link-text"><i class="fa fa-home fa-lg" aria-hidden="true"></i></span>
+        <a id="homeButton" class="navbar-btn btn btn-default" href="#">
+          <span class="nav-link-text"><img id="homeLogo" src="/img/gardenGuruLogoMini.png"></span>
         </a>
       </li>
       <li class="col-2 col-sm-2 col-md-2 nav-item">
@@ -159,14 +178,20 @@
   </nav>
   <div class="content-wrapper">
     <div id="infoCardContainer" class="container-fluid">
-      <div class="jumbotron jumbtron-fluid">
+      <div class="top-jumbo jumbotron jumbtron-fluid">
         <div class="container">
-          <h1 class="display-3">Great Guru Travis' Gorgeous Garden of the Gods</h1>
-          <p class="lead">We dem garden boyzzzz</p>
+          <h4>Guru Travis' Garden</h4>
+          <div class="row">
+            <div class="col-6">
+              <p>San Antonio, TX</p>
+              <p id="time"></p>
+            </div>
+            <div class="col-6"></div>
+          </div>
         </div>
       </div>
       <!-- Icon Cards-->
-      <div class="top-row row">
+      <div class="info-card row">
         <div class="col-md-12">
           <div class="card text-black secondary-color o-hidden h-100">
             <div class="card-body">
@@ -299,5 +324,38 @@
     <script src="/js/sb-admin-charts.min.js"></script>
   </div>
 </body>
+
+<script type="text/javascript">
+
+  function updateTime() {
+    var currentTime = new Date();
+    var hours = currentTime.getHours();
+    var minutes = currentTime.getMinutes();
+    var seconds = currentTime.getSeconds();
+
+    if (minutes < 10) {
+      minutes = "0" + minutes;
+    }
+
+    if (seconds < 10) {
+      seconds = "0" + seconds;
+    }
+
+    var time_str = hours + ":" + minutes + ":" + seconds + " ";
+
+    if (hours > 11) {
+      time_str += "PM";
+    } else {
+      time_str += "AM";
+    }
+
+    $("#time").html(time_str);
+  }
+
+  updateTime();
+
+  setInterval(updateTime, 1000);
+
+</script>
 
 </html>
