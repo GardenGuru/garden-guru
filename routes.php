@@ -6,6 +6,7 @@
     // create a new instance of the needed controller
     switch($controller) {
       case 'home':
+        require_once('models/user.php');
         $controller = new HomeController();
       break;
     }
