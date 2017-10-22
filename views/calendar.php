@@ -12,7 +12,7 @@
     <!-- Page level plugin CSS-->
     <link href="css/dataTables.bootstrap4.css" rel="stylesheet">
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin.min.css" rel="stylesheet">
+    <link href="css/sb-admin.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/custom-style.css">
     <style>
       #logo {

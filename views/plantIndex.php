@@ -9,17 +9,23 @@
   <meta name="author" content="">
   <title>Garden Guru</title>
   <!-- Bootstrap core CSS-->
-  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template-->
-  <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <!-- Page level plugin CSS-->
   <link href="css/dataTables.bootstrap4.css" rel="stylesheet">
   <!-- Custom styles for this template-->
-  <link href="css/sb-admin.min.css" rel="stylesheet">
+  <link href="css/sb-admin.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/custom-style.css">
   <style>
     #searchBar {
       margin-top: 1em;
+    }
+    .top-jumbo {
+      margin-top: 0em;
+    }
+    .content-wrapper {
+      background: transparent;
     }
   </style>
 </head>
@@ -29,7 +35,7 @@
   <nav class="navbar navbar-dark bg-dark fixed-top mb-4" id="mainNav">
     <ul class="navbar-nav" id="exampleAccordion">
       <li class="col-2 col-sm-2 col-md-2 nav-item">
-        <a id="homeButton" class="navbar-btn btn btn-default" href="/manage.php">
+        <a id="homeButton" class="navbar-btn btn btn-default" href="?controller=home&action=manage">
           <span class="nav-link-text"><img id="homeLogo" src="/img/gardenGuruLogoMini.png"></span>
         </a>
       </li>
@@ -39,12 +45,12 @@
         </a>
       </li>
       <li class="col-2 col-sm-2 col-md-2 nav-item">
-        <a class="navbar-btn btn btn-default" href="/calendar.php">
+        <a class="navbar-btn btn btn-default" href="?controller=home&action=calendar">
           <span class="nav-link-text"><i class="fa fa-calendar fa-lg" aria-hidden="true"></i></span>
         </a>
       </li>
       <li class="col-2 col-sm-2 col-md-2 nav-item">
-        <a class="navbar-btn btn btn-default" href="/plantIndex.php">
+        <a class="navbar-btn btn btn-default" href="?controller=home&action=plantIndex">
           <span class="nav-link-text"><i class="fa fa-leaf fa-lg" aria-hidden="true"></i></span>
         </a>
       </li>
@@ -79,7 +85,7 @@
       <!-- Icon Cards-->
       <div class="info-card row">
         <div class="col-md-12">
-          <div class="card text-black secondary-color o-hidden h-100">
+          <div class="card text-black secondary-color o-hidden">
             <div class="card-body">
               <div class="row">
                 <div class="card-img-div col-3 col-sm-3 col-md-2 my-auto">
@@ -103,7 +109,7 @@
 
       <div class="info-card row">
         <div class="col-md-12">
-          <div class="card text-black secondary-color o-hidden h-100">
+          <div class="card text-black secondary-color o-hidden">
             <div class="card-body">
               <div class="row">
                 <div class="card-img-div col-3 col-sm-3 col-md-2 my-auto">
@@ -127,7 +133,7 @@
 
       <div class="info-card row">
         <div class="col-md-12">
-          <div class="card text-black secondary-color o-hidden h-100">
+          <div class="card text-black secondary-color o-hidden">
             <div class="card-body">
               <div class="row">
                 <div class="card-img-div col-3 col-sm-3 col-md-2 my-auto">
@@ -151,7 +157,7 @@
 
       <div class="info-card row">
         <div class="col-md-12">
-          <div class="card text-black secondary-color o-hidden h-100">
+          <div class="card text-black secondary-color o-hidden">
             <div class="card-body">
               <div class="row">
                 <div class="card-img-div col-3 col-sm-3 col-md-2 my-auto">
@@ -175,7 +181,7 @@
 
       <div class="info-card row">
         <div class="col-md-12">
-          <div class="card text-black secondary-color o-hidden h-100">
+          <div class="card text-black secondary-color o-hidden">
             <div class="card-body">
               <div class="row">
                 <div class="card-img-div col-3 col-sm-3 col-md-2 my-auto">

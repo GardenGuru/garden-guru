@@ -9,14 +9,23 @@
   <meta name="author" content="">
   <title>Garden Guru</title>
   <!-- Bootstrap core CSS-->
-  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template-->
-  <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <!-- Page level plugin CSS-->
   <link href="css/dataTables.bootstrap4.css" rel="stylesheet">
   <!-- Custom styles for this template-->
   <link href="css/sb-admin.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/custom-style.css">
+  <style>
+    .content-wrapper {
+      background: transparent;
+    }
+
+    .top-jumbo {
+      margin-top: 0em;
+    }
+  </style>
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -75,7 +84,7 @@
       <!-- Icon Cards-->
       <div class="info-card row">
         <div class="col-md-12">
-          <div class="card text-black secondary-color o-hidden h-100">
+          <div class="card text-black secondary-color o-hidden">
             <div class="card-body">
               <div class="row">
                 <div class="card-img-div col-3 col-sm-3 col-md-2 my-auto">
@@ -97,7 +106,7 @@
 
       <div class="info-card row">
         <div class="col-md-12">
-          <div class="card text-black secondary-color o-hidden h-100">
+          <div class="card text-black secondary-color o-hidden">
             <div class="card-body">
               <div class="row">
                 <div class="card-img-div col-3 col-sm-3 col-md-2 my-auto">
@@ -119,7 +128,7 @@
 
       <div class="info-card row">
         <div class="col-md-12">
-          <div class="card text-black secondary-color o-hidden h-100">
+          <div class="card text-black secondary-color o-hidden">
             <div class="card-body">
               <div class="row">
                 <div class="card-img-div col-3 col-sm-3 col-md-2 my-auto">
@@ -141,7 +150,7 @@
 
       <div class="info-card row">
         <div class="col-md-12">
-          <div class="card text-black secondary-color o-hidden h-100">
+          <div class="card text-black secondary-color o-hidden">
             <div class="card-body">
               <div class="row">
                 <div class="card-img-div col-3 col-sm-3 col-md-2 my-auto">
@@ -163,7 +172,7 @@
 
       <div class="info-card row">
         <div class="col-md-12">
-          <div class="card text-black secondary-color o-hidden h-100">
+          <div class="card text-black secondary-color o-hidden">
             <div class="card-body">
               <div class="row">
                 <div class="card-img-div col-3 col-sm-3 col-md-2 my-auto">

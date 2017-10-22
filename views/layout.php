@@ -1,4 +1,1 @@
-<DOCTYPE html>
-<html>
-    <?php require_once('routes.php'); ?>
-<html>
+<?php require_once('routes.php'); ?>
